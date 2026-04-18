@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm libxft harfbuzz base-devel
+pacman -Syu --noconfirm libxft harfbuzz base-devel libxcursor
 
 # echo "Installing debloated packages..."
 # echo "---------------------------------------------------------------"
