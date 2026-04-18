@@ -10,7 +10,7 @@ export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=./st.png
-#export DESKTOP=./build/
+export DESKTOP=./build/st_make/share/applicatons/st.desktop
 
 # Deploy dependencies
 quick-sharun ./build/st_make/bin/st
