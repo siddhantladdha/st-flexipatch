@@ -6,7 +6,17 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font = "JetBrainsMono Nerd Font Mono:style:Medium:size=18";
+// Setting the following as default since app image is packaging it.
+// Can be changed with Xresources since XRESOURCES_PATCH is used.
+static char *font = "JetBrainsMono Nerd Font Mono:"
+                    "style=Medium:"
+                    "size=18:"
+                    "antialias=true:"
+                    "autohint=false:"
+                    "lcdfilter=lcddefault:"
+                    "hinting=true:"
+                    "hintstyle=hintslight:"
+                    "rgba=rgb:";
 #if FONT2_PATCH
 /* Spare fonts */
 static char *font2[] = {
@@ -187,27 +197,27 @@ char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
+        /* 8 normal colors */
+        [0] = "#000000", /* black   */
+        [1] = "#FF5555", /* red     */
+        [2] = "#50FA7B", /* green   */
+        [3] = "#F1FA8C", /* yellow  */
+        [4] = "#BD93F9", /* blue    */
+        [5] = "#FF79C6", /* magenta */
+        [6] = "#8BE9FD", /* cyan    */
+        [7] = "#BFBFBF", /* white   */
+        /* 8 bright colors */
+        [8]  = "#4D4D4D", /* black   */
+        [9]  = "#FF6E67", /* red     */
+        [10] = "#5AF78E", /* green   */
+        [11] = "#F4F99D", /* yellow  */
+        [12] = "#CAA9FA", /* blue    */
+        [13] = "#FF92D0", /* magenta */
+        [14] = "#9AEDFE", /* cyan    */
+        [15] = "#E6E6E6", /* white   */
+        /* special colors */
+        [256] = "#282a36", /* background */
+        [257] = "#f8F8F2", /* foreground */
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */

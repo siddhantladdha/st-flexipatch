@@ -4,16 +4,20 @@ set -eu
 
 ARCH=$(uname -m)
 #VERSION=$(pacman -Q PACKAGENAME | awk '{print $2; exit}') # example command to get version of application here
-VERSION=0.9.3
+VERSION=$(sed -n 's/^VERSION = //p' ./config.mk)
+# VERSION=0.9.3
 export ARCH VERSION
+
+DESTDIR=./build
+PREFIX=/st_make
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=./st.png
-export DESKTOP=./build/st_make/share/applications/st.desktop
+export DESKTOP=$DESTDIR$PREFIX/share/applications/st.desktop
 
 # Deploy dependencies
-quick-sharun ./build/st_make/bin/st
+quick-sharun $DESTDIR$PREFIX/bin/st
 
 # Additional changes can be done in between here
 
