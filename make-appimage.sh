@@ -18,7 +18,8 @@ export DESKTOP=$DESTDIR$PREFIX/share/applications/st.desktop
 # Deploy dependencies
 # echo "Running xrdb merge"
 # xrdb -merge ./st_demo.Xresources
-quick-sharun $DESTDIR$PREFIX/bin/st
+# quick-sharun $DESTDIR$PREFIX/bin/st
+quick-sharun $DESTDIR$PREFIX/bin/st /usr/bin/xrdb
 # Additional changes can be done in between here
 
 # Turn AppDir into AppImage
