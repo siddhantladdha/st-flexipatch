@@ -6,3 +6,5 @@ Icon=ST_EXECUTABLE_ICON
 Terminal=false
 Type=Application
 Categories=System;TerminalEmulator;
+GenericName=Terminal
+StartupWMClass=st
