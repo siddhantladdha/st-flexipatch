@@ -16,8 +16,8 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=./st.png
 export DESKTOP=$(DESTDIR)$(PREFIX)/share/applications/st.desktop
 # Deploy dependencies
-echo "Running xrdb merge"
-xrdb -merge ./st_demo.Xresources
+# echo "Running xrdb merge"
+# xrdb -merge ./st_demo.Xresources
 quick-sharun $DESTDIR$PREFIX/bin/st
 # Additional changes can be done in between here
 
