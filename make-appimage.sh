@@ -9,16 +9,17 @@ VERSION=$(sed -n 's/^VERSION = //p' ./config.mk)
 export ARCH VERSION
 
 DESTDIR=./build
-PREFIX=/st_make
+PREFIX=/usr
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=./st.png
 export DESKTOP=$DESTDIR$PREFIX/share/applications/st.desktop
-
 # Deploy dependencies
-quick-sharun $DESTDIR$PREFIX/bin/st
-
+# echo "Running xrdb merge"
+# xrdb -merge ./st_demo.Xresources
+# quick-sharun $DESTDIR$PREFIX/bin/st
+quick-sharun $DESTDIR$PREFIX/bin/st /usr/bin/xrdb
 # Additional changes can be done in between here
 
 # Turn AppDir into AppImage
