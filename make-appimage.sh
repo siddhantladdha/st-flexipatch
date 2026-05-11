@@ -16,6 +16,7 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=./st.png
 export DESKTOP=$DESTDIR$PREFIX/share/applications/st.desktop
 # Deploy dependencies
+# The following won't work on CI. Adding a path to xrdb binary is better way to ensure sharun packages it.
 # echo "Running xrdb merge"
 # xrdb -merge ./st_demo.Xresources
 # quick-sharun $DESTDIR$PREFIX/bin/st
