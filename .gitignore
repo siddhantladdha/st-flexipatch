@@ -3,3 +3,6 @@ config.h
 patches.h
 st
 build/
+*.AppImage
+*.Appimage
+*.appimage
