@@ -27,7 +27,7 @@ if [ "${DEVEL_RELEASE-}" = 1 ]; then
     sed --in-place 's/#define SIXEL_PATCH 0/#define SIXEL_PATCH 1/g' patches.def.h
     make install st DESTDIR=./build PREFIX=/usr \
         X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 \
-        SIXEL_C="sixel.c sixel_hls.c" SIXEL_LIBS="$(pkg_config --libs imlib2)"
+        SIXEL_C="sixel.c sixel_hls.c" SIXEL_LIBS='`$($PKG_CONFIG) --libs imlib2`'
 else
     make install st DESTDIR=./build PREFIX=/usr \
         X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
