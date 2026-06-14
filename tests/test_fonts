@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# === === ===
+# Basic testing of nerd font glyphs.
+#
+# Source: https://github.com/ryanoasis/nerd-fonts/
+# === === ===
 # Nerd Fonts Version: 3.4.0
 # Script Version: 1.1.1
 

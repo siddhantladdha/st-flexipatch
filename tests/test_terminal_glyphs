@@ -1,0 +1,29 @@
+#!/usr/bin/env fish
+# === === ===
+# Mini test for Nerd font Ligatures, emojis and friends.
+#
+# Author: Github Copilot.
+# Reviewed by: Sid
+# === === ===
+echo "========"
+echo "Testing terminal glyph rendering"
+echo "Showing user locale information: Running 'locale'"
+echo "========"
+locale
+echo "========"
+echo "Showing system locale information: Running 'localectl'"
+echo "========"
+localectl
+echo "========"
+echo "Nerd fonts test"
+echo -n "Snake: "
+echo -e "\xf0\x9f\x90\x8d"
+echo -n "Git branch: "
+echo -e "\xee\x82\xa0"
+echo "========"
+echo "Ligatures test"
+echo "-> => != == <= >= -- --- .. ... ->> <- <=> <!-- --> ++ ** // :: :: ~>"
+echo "Math symbols"
+echo "∑ ∏ ∞ ∈ ∉ ∅ ∩ ∪ ≠ ≤ ≥ ≈ ± √ ∂ ∇ ∫"
+echo "Emojis test"
+echo "😀 😎 🤔 😭 🔥 💡 🚀 ✅ ❌ ⚠️ 💀 👾 🎉 🌈 ⭐"

@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+# === === ===
+# Basic test for true color support in the terminal.
+#
+# Source: https://github.com/termstandard/colors
+# === === ===
+echo "TERM: $TERM"
+echo "COLORTERM: $COLORTERM"
+fgbg=48 # background
+fgbg=38 # foreground
+red=255
+green=102
+blue=0
+printf '\e[%u;2;%u;%u;%um%s\e[m\n' "$fgbg" "$red" "$green" "$blue" TRUECOLOR
+awk 'BEGIN{
+    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+    for (colnum = 0; colnum<77; colnum++) {
+        r = 255-(colnum*255/76);
+        g = (colnum*510/76);
+        b = (colnum*255/76);
+        if (g>255) g = 510-g;
+        printf "\033[48;2;%d;%d;%dm", r,g,b;
+        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+        printf "%s\033[0m", substr(s,colnum+1,1);
+    }
+    printf "\n";
+}'
+echo "Dumping infocmp"
+infocmp
