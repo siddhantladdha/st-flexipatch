@@ -2,3 +2,5 @@
 config.h
 patches.h
 st
+build/
+*.[Aa]pp[Ii]mage

@@ -4,7 +4,7 @@ VERSION = 0.9.3
 # Customize below to fit your system
 
 # paths
-PREFIX = /usr/local
+PREFIX = $(HOME)/.local
 MANPREFIX = $(PREFIX)/share/man
 ICONPREFIX = $(PREFIX)/share/pixmaps
 ICONNAME = st.png
@@ -18,13 +18,13 @@ PKG_CONFIG = pkg-config
 #XRENDER = `$(PKG_CONFIG) --libs xrender`
 
 # Uncomment this for the themed cursor patch / THEMED_CURSOR_PATCH
-#XCURSOR = `$(PKG_CONFIG) --libs xcursor`
+XCURSOR = `$(PKG_CONFIG) --libs xcursor`
 
 # Uncomment the lines below for the ligatures patch / LIGATURES_PATCH
-#LIGATURES_C = hb.c
-#LIGATURES_H = hb.h
-#LIGATURES_INC = `$(PKG_CONFIG) --cflags harfbuzz`
-#LIGATURES_LIBS = `$(PKG_CONFIG) --libs harfbuzz`
+LIGATURES_C = hb.c
+LIGATURES_H = hb.h
+LIGATURES_INC = `$(PKG_CONFIG) --cflags harfbuzz`
+LIGATURES_LIBS = `$(PKG_CONFIG) --libs harfbuzz`
 
 # Uncomment this for the SIXEL patch / SIXEL_PATCH
 #SIXEL_C = sixel.c sixel_hls.c
@@ -54,4 +54,4 @@ STLDFLAGS = $(LIBS) $(LDFLAGS)
 #MANPREFIX = ${PREFIX}/man
 
 # compiler and linker
-# CC = c99
+CC = c99

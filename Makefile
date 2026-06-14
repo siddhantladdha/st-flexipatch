@@ -46,7 +46,10 @@ install: st
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/st.1
 	tic -sx st.info
 	mkdir -p $(DESTDIR)$(PREFIX)/share/applications # desktop-entry patch
-	test -f ${DESTDIR}${PREFIX}/share/applications/st.desktop || cp -n st.desktop $(DESTDIR)$(PREFIX)/share/applications # desktop-entry patch
+	sed -e "s#ST_EXECUTABLE_PATH#$(DESTDIR)$(PREFIX)/bin/st#g" \
+	-e "s#ST_EXECUTABLE_ICON#$(ICONPREFIX)/$(ICONNAME)#g" \
+	< st.desktop > $(DESTDIR)$(PREFIX)/share/applications/st.desktop
+	# test -f ${DESTDIR}${PREFIX}/share/applications/st.desktop || cp -n st.desktop $(DESTDIR)$(PREFIX)/share/applications # desktop-entry patch
 	@echo Please see the README file regarding the terminfo entry of st.
 
 uninstall:

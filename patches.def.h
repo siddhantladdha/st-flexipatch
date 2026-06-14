@@ -34,12 +34,12 @@
  * the window to be resized to any pixel size.
  * https://st.suckless.org/patches/anygeometry/
  */
-#define ANYGEOMETRY_PATCH 0
+#define ANYGEOMETRY_PATCH 1
 
 /* This patch allows st to resize to any pixel size rather than snapping to character width/height.
  * https://st.suckless.org/patches/anysize/
  */
-#define ANYSIZE_PATCH 0
+#define ANYSIZE_PATCH 1
 
 /* A simple variant of the anysize patch that only changes the resize hints to allow the window to
  * be resized to any size.
@@ -70,18 +70,18 @@
  * This patch makes bold text rendered simply as bold, leaving the color unaffected.
  * https://st.suckless.org/patches/bold-is-not-bright/
  */
-#define BOLD_IS_NOT_BRIGHT_PATCH 0
+#define BOLD_IS_NOT_BRIGHT_PATCH 1
 
 /* This patch adds custom rendering of lines/blocks/braille characters for gapless alignment.
  * https://st.suckless.org/patches/boxdraw/
  */
-#define BOXDRAW_PATCH 0
+#define BOXDRAW_PATCH 1
 
 /* By default st only sets PRIMARY on selection.
  * This patch makes st set CLIPBOARD on selection.
  * https://st.suckless.org/patches/clipboard/
  */
-#define CLIPBOARD_PATCH 0
+#define CLIPBOARD_PATCH 1
 
 /* This patch allows st to be resized without cutting off text when the terminal window is
  * made larger again. Text does not wrap when the terminal window is made smaller, you may
@@ -89,7 +89,7 @@
  *
  * https://github.com/bakkeby/st-flexipatch/issues/34
  */
-#define COLUMNS_PATCH 0
+#define COLUMNS_PATCH 1
 
 /* Select and copy the last URL displayed with Mod+l. Multiple invocations cycle through the
  * available URLs.
@@ -107,7 +107,7 @@
  * restores the window title (for instance nvim does this when opening and closing).
  * https://st.suckless.org/patches/csi_22_23/
  */
-#define CSI_22_23_PATCH 0
+#define CSI_22_23_PATCH 1
 
 /* According to the specification (see link in BLINKING_CURSOR_PATCH) the "Set cursor style
  * (DECSCUSR), VT520." escape sequences define both values of 0 and 1 as a blinking block,
@@ -127,7 +127,7 @@
 /* Return BS on pressing backspace and DEL on pressing the delete key.
  * https://st.suckless.org/patches/delkey/
  */
-#define DELKEY_PATCH 0
+#define DELKEY_PATCH 1
 
 /* This patch adds the option of disabling bold fonts globally.
  * https://st.suckless.org/patches/disable_bold_italic_fonts/
@@ -147,7 +147,7 @@
 /* Allows dragging a file into the terminal and have the path printed.
  * https://st.suckless.org/patches/drag-n-drop
  */
-#define DRAG_AND_DROP_PATCH 0
+#define DRAG_AND_DROP_PATCH 1
 
 /* This patch makes the cursor color the inverse of the current cell color.
  * https://st.suckless.org/patches/dynamic-cursor-color/
@@ -192,7 +192,7 @@
  * that are available to GUI applications.
  * https://st.suckless.org/patches/fix_keyboard_input/
  */
-#define FIXKEYBOARDINPUT_PATCH 0
+#define FIXKEYBOARDINPUT_PATCH 1
 
 /* This patch allows you to add spare font besides the default. Some glyphs can be not present in
  * the default font. For this glyphs st uses font-config and try to find them in font cache first.
@@ -249,7 +249,7 @@
  * https://github.com/cog1to/st-ligatures
  * https://st.suckless.org/patches/ligatures/
  */
-#define LIGATURES_PATCH 0
+#define LIGATURES_PATCH 1
 
 /* This patch makes st ignore terminal color attributes by forcing display of the default
  * foreground and background colors only - making for a monochrome look. Idea ref.
@@ -289,13 +289,13 @@
  * original version that predates the version that reads the image from a .png file.
  * https://st.suckless.org/patches/netwmicon/
  */
-#define NETWMICON_LEGACY_PATCH 0
+#define NETWMICON_LEGACY_PATCH 1
 
 /* This patch allows you to spawn a new st terminal using Ctrl-Shift-Return. It will have the
  * same CWD (current working directory) as the original st instance.
  * https://st.suckless.org/patches/newterm/
  */
-#define NEWTERM_PATCH 0
+#define NEWTERM_PATCH 1
 
 /* This patch will set the _MOTIF_WM_HINTS property for the st window which, if the window manager
  * respects it, will show the st window without window decorations.
@@ -308,19 +308,19 @@
 /* Open contents of the clipboard in a user-defined browser.
  * https://st.suckless.org/patches/open_copied_url/
  */
-#define OPENCOPIED_PATCH 0
+#define OPENCOPIED_PATCH 1
 
 /* Open the selected text using xdg-open.
  * https://st.suckless.org/patches/open_selected_text/
  */
-#define OPEN_SELECTED_TEXT_PATCH 0
+#define OPEN_SELECTED_TEXT_PATCH 1
 
 /* This patch allows for URLs to be opened directly when you click on them. This may not work with
  * all terminal applications.
  *
  * https://www.reddit.com/r/suckless/comments/cc83om/st_open_url/
  */
-#define OPENURLONCLICK_PATCH 0
+#define OPENURLONCLICK_PATCH 1
 
 /* This patch allows st to fetch the current working directory through the OSC 7 escape
  * sequence emitted by shells. Must be used with newterm patch.
@@ -328,21 +328,21 @@
  * https://codeberg.org/dnkl/foot/wiki#spawning-new-terminal-instances-in-the-current-working-directory
  * https://github.com/veltza/st-sx/commit/817865c2c6ed905af8849580e58bdcf399216fbd
  */
-#define OSC7_PATCH 0
+#define OSC7_PATCH 1
 
 /* This patch allows jumping between prompts by utilizing the OSC 133 escape sequence
  * emitted by shells. Must be used with either reflow or scrollback patch.
  *
  * https://codeberg.org/dnkl/foot#jumping-between-prompts
  */
-#define OSC133_PATCH 0
+#define OSC133_PATCH 1
 
 /* Reflow.
  * Allows st to be resized without cutting off text when the terminal window is made larger again.
  * Text wraps when the terminal window is made smaller.
  * Comes with scrollback.
  */
-#define REFLOW_PATCH 0
+#define REFLOW_PATCH 1
 
 /* This patch allows you to specify a border that is relative in size to the width of a cell
  * in the terminal.
@@ -359,13 +359,13 @@
 /* Scroll back through terminal output using Shift+{PageUp, PageDown}.
  * https://st.suckless.org/patches/scrollback/
  */
-#define SCROLLBACK_PATCH 0
+#define SCROLLBACK_PATCH 1
 
 /* Scroll back through terminal output using Shift+MouseWheel.
  * This variant depends on SCROLLBACK_PATCH being enabled.
  * https://st.suckless.org/patches/scrollback/
  */
-#define SCROLLBACK_MOUSE_PATCH 0
+#define SCROLLBACK_MOUSE_PATCH 1
 
 /* Scroll back through terminal output using mouse wheel (when not in MODE_ALTSCREEN).
  * This variant depends on SCROLLBACK_PATCH being enabled.
@@ -427,7 +427,7 @@
  * shown by vte terminals like termite.
  * https://st.suckless.org/patches/swapmouse/
  */
-#define SWAPMOUSE_PATCH 0
+#define SWAPMOUSE_PATCH 1
 
 /* This patch adds synchronized-updates/application-sync support in st.
  * This will have no effect except when an application uses the synchronized-update escape
@@ -440,14 +440,14 @@
  *
  * https://st.suckless.org/patches/sync/
  */
-#define SYNC_PATCH 0
+#define SYNC_PATCH 1
 
 /* Instead of a default X cursor, use the xterm cursor from your cursor theme.
  * You need to uncomment the corresponding line in config.mk to use the -lXcursor library
  * when including this patch.
  * https://st.suckless.org/patches/themed_cursor/
  */
-#define THEMED_CURSOR_PATCH 0
+#define THEMED_CURSOR_PATCH 1
 
 /* Adds support for special underlines.
  *
@@ -465,7 +465,7 @@
  *
  * https://st.suckless.org/patches/undercurl/
  */
-#define UNDERCURL_PATCH 0
+#define UNDERCURL_PATCH 1
 
 /* Allows mouse scroll without modifier keys for regardless of alt screen using the external
  * scroll program.
@@ -485,7 +485,7 @@
  *
  * https://git.suckless.org/st/commit/528241aa3835e2f1f052abeeaf891737712955a0.html
  */
-#define USE_XFTFONTMATCH_PATCH 0
+#define USE_XFTFONTMATCH_PATCH 1
 
 /* Vertically center lines in the space available if you have set a larger chscale in config.h
  * https://st.suckless.org/patches/vertcenter/
@@ -522,23 +522,16 @@
 /* This patch allows user to specify the initial path st should use as the working directory.
  * https://st.suckless.org/patches/workingdir/
  */
-#define WORKINGDIR_PATCH 0
+#define WORKINGDIR_PATCH 1
 
 /* This patch adds the ability to configure st via Xresources. At startup, st will read and
  * apply the resources named in the resources[] array in config.h.
  * https://st.suckless.org/patches/xresources/
  */
-#define XRESOURCES_PATCH 0
+#define XRESOURCES_PATCH 1
 
 /* This patch adds the ability to reload the Xresources config when a SIGUSR1 signal is received
  * e.g.: killall -USR1 st
  * Depends on the XRESOURCES_PATCH.
  */
-#define XRESOURCES_RELOAD_PATCH 0
-
-/* This patch adds the ability to configure st via Xdefaults, in addition to Xresources,
- * like the rxvt-unicode terminal. At startup, st will read and apply the system and user's
- * local Xdefault files, the XServer's Xresources, and the screen and per-host Xdefaults.
- * This patch depends on XRESOURCES_PATCH and is compatible with XRESOURCES_RELOAD_PATCH.
- */
-#define XRESOURCES_XDEFAULTS_PATCH 0
+#define XRESOURCES_RELOAD_PATCH 1
